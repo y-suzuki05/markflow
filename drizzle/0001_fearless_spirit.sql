@@ -1,0 +1,1 @@
+ALTER TABLE "bookmarks" ADD CONSTRAINT "bookmarks_memo_length_check" CHECK (char_length("bookmarks"."memo") <= 300);

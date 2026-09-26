@@ -8,6 +8,13 @@
       "when": 1790403876191,
       "tag": "0000_salty_shard",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790414217081,
+      "tag": "0001_fearless_spirit",
+      "breakpoints": true
     }
   ]
 }
