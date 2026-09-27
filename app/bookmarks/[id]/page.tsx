@@ -3,7 +3,7 @@ import { db } from "@/lib/db";
 import { bookmarksTable } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import Link from "next/link";
-import UrlCopyButton from "@/app/components/UrlCopyButton";
+import UrlCopyButton from "@/app/components/url-copy-button";
 
 async function getBookmark(id: number) {
   const rows = await db
