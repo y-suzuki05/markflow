@@ -18,7 +18,14 @@ export default async function Page({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const id = Number((await params).id);
+  const { id: rawId } = await params;
+  const id = Number(rawId);
+
+  // TODO: 404ページ追加
+  if (!Number.isInteger(id) || id < 1) {
+    return <Box>なにもありません</Box>;
+  }
+
   const bookmark = await getBookmark(id);
 
   // TODO: 404ページ追加

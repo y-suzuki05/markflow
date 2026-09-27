@@ -7,7 +7,7 @@ type UrlCopyButtonProps = {
 };
 
 export default function UrlCopyButton({ url }: UrlCopyButtonProps) {
-  async function UrlCopy() {
+  async function copyUrl() {
     try {
       await navigator.clipboard.writeText(url);
       toaster.create({
@@ -29,7 +29,7 @@ export default function UrlCopyButton({ url }: UrlCopyButtonProps) {
       variant={"outline"}
       size={"lg"}
       fontWeight={700}
-      onClick={() => UrlCopy()}
+      onClick={() => copyUrl()}
     >
       URLをコピー
     </Button>
