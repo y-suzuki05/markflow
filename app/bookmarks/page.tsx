@@ -50,7 +50,9 @@ export default async function Page() {
                 </Text>
               </Card.Body>
               <Card.Footer justifyContent={"space-between"}>
-                <Text>{bookmark.createdAt.toLocaleString("ja-JP")}</Text>
+                <Text color={"#718096"} fontSize={"12px"}>
+                  登録日時：{bookmark.createdAt.toLocaleString("ja-JP")}
+                </Text>
                 <Link href={`/bookmarks/${bookmark.id}`}>
                   <Box
                     border={"1px solid"}
