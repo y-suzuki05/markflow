@@ -7,6 +7,7 @@ import UrlCopyButton from "@/app/components/url-copy-button";
 import { notFound } from "next/navigation";
 
 async function getBookmark(id: number) {
+  'use cache'
   const rows = await db
     .select()
     .from(bookmarksTable)
