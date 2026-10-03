@@ -4,18 +4,30 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <Box
-      w="full"
+      w={{ base: "calc(100% - 32px)", md: "full" }}
       maxW="760px"
       mx="auto"
-      my="48px"
-      p={"64px"}
+      my={{ base: "24px", md: "48px" }}
+      px={{ base: "20px", md: "64px" }}
+      py={{ base: "32px", md: "64px" }}
+      fontSize={{ base: "14px", md: "16px" }}
+      overflowWrap="anywhere"
       bg={"#fff"}
       textAlign={"center"}
     >
-      <Heading as={"h2"} fontSize={"48px"} mb={"32px"} color={"#319795"}>
+      <Heading
+        as={"h2"}
+        fontSize={{ base: "36px", md: "48px" }}
+        mb={{ base: "20px", md: "32px" }}
+        color={"#319795"}
+      >
         404
       </Heading>
-      <Text mb={"16px"} fontWeight={700} fontSize={"24px"}>
+      <Text
+        mb={"16px"}
+        fontWeight={700}
+        fontSize={{ base: "20px", md: "24px" }}
+      >
         ページが見つかりません
       </Text>
       <Text mb={"24px"}>
@@ -24,6 +36,8 @@ export default function NotFound() {
       <Link href={"/bookmarks"}>
         <Box
           display={"inline-block"}
+          w={{ base: "full", md: "auto" }}
+          minH="44px"
           py={"10px"}
           px={"16px"}
           borderRadius={"md"}

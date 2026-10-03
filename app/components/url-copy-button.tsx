@@ -25,6 +25,8 @@ export default function UrlCopyButton({ url }: UrlCopyButtonProps) {
 
   return (
     <Button
+      w={{ base: "full", md: "auto" }}
+      fontSize={{ base: "14px", md: "16px" }}
       px={"16px"}
       variant={"outline"}
       size={"lg"}

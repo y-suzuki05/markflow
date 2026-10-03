@@ -31,10 +31,21 @@ export default async function Page({
   if (!bookmark) notFound();
 
   return (
-    <Box w="full" maxW="760px" mx="auto" my="48px" px="4">
+    <Box
+      w="full"
+      maxW="760px"
+      mx="auto"
+      my={{ base: "24px", md: "48px" }}
+      px="4"
+      fontSize={{ base: "14px", md: "16px" }}
+      overflowWrap="anywhere"
+    >
       <Link href={`/bookmarks`}>
         <Box
           display={"inline-block"}
+          w={{ base: "full", md: "auto" }}
+          textAlign="center"
+          minH="44px"
           border={"1px solid"}
           borderColor={"#E2E8F0"}
           py={"10px"}
@@ -50,16 +61,18 @@ export default async function Page({
         border={"1px solid"}
         borderColor={"#E2E8F0"}
         borderRadius={"md"}
-        mt={"24px"}
-        p={"32px"}
+        mt={{ base: "20px", md: "24px" }}
+        p={{ base: "20px", md: "32px" }}
       >
-        <Heading>{bookmark.title}</Heading>
+        <Heading fontSize={{ base: "22px", md: "24px" }} lineHeight="1.4">
+          {bookmark.title}
+        </Heading>
         <Text color={"#718096"} fontSize={"12px"} mt={"12px"}>
           {bookmark.url}
         </Text>
         <Text
-          mt={"24px"}
-          py={"24px"}
+          mt={{ base: "20px", md: "24px" }}
+          py={{ base: "20px", md: "24px" }}
           borderTop={"1px solid"}
           borderBottom={"1px solid"}
           borderColor={"#E2E8F0"}
@@ -67,16 +80,26 @@ export default async function Page({
           {bookmark.memo}
         </Text>
         <Flex
-          mt={"24px"}
-          alignItems={"center"}
+          mt={{ base: "20px", md: "24px" }}
+          direction={{ base: "column", md: "row" }}
+          alignItems={{ base: "stretch", md: "center" }}
+          gap={{ base: "16px", md: "12px" }}
           justifyContent={"space-between"}
         >
           <Text color={"#718096"} fontSize={"12px"}>
             登録日時：{bookmark.createdAt.toLocaleString("ja-JP")}
           </Text>
-          <Flex gap={"12px"}>
+          <Flex
+            direction={{ base: "column", sm: "row" }}
+            gap="12px"
+            flexShrink={0}
+          >
             <UrlCopyButton url={bookmark.url} />
             <ChakraLink
+              w={{ base: "full", md: "auto" }}
+              minH="44px"
+              justifyContent="center"
+              fontSize={{ base: "14px", md: "16px" }}
               href={bookmark.url}
               target="_blank"
               rel="noopener noreferrer"

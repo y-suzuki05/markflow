@@ -19,8 +19,12 @@ export default function BookmarkForm() {
     <form action={formAction}>
       <Stack gap={4}>
         <Field.Root required invalid={Boolean(state.errors?.title)}>
-          <Field.Label>タイトル</Field.Label>
+          <Field.Label fontSize={{ base: "14px", md: "16px" }}>
+            タイトル
+          </Field.Label>
           <Input
+            minH="44px"
+            fontSize="16px"
             name="title"
             value={values.title}
             onChange={(event) =>
@@ -33,8 +37,10 @@ export default function BookmarkForm() {
         </Field.Root>
 
         <Field.Root required invalid={Boolean(state.errors?.url)}>
-          <Field.Label>URL</Field.Label>
+          <Field.Label fontSize={{ base: "14px", md: "16px" }}>URL</Field.Label>
           <Input
+            minH="44px"
+            fontSize="16px"
             name="url"
             type="url"
             value={values.url}
@@ -48,8 +54,12 @@ export default function BookmarkForm() {
         </Field.Root>
 
         <Field.Root required invalid={Boolean(state.errors?.memo)}>
-          <Field.Label>一言メモ</Field.Label>
+          <Field.Label fontSize={{ base: "14px", md: "16px" }}>
+            一言メモ
+          </Field.Label>
           <Textarea
+            minH={{ base: "120px", md: "100px" }}
+            fontSize="16px"
             name="memo"
             value={values.memo}
             onChange={(event) =>
@@ -63,7 +73,9 @@ export default function BookmarkForm() {
 
         <Button
           type="submit"
-          alignSelf="flex-end"
+          alignSelf={{ base: "stretch", md: "flex-end" }}
+          w={{ base: "full", md: "auto" }}
+          fontSize={{ base: "14px", md: "16px" }}
           colorPalette="teal"
           variant="solid"
           px={"16px"}
