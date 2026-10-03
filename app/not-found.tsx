@@ -31,7 +31,7 @@ export default function NotFound() {
           color={"#fff"}
           fontWeight={700}
         >
-          ブックマーク一覧へ戻る
+          一覧へ戻る
         </Box>
       </Link>
     </Box>
