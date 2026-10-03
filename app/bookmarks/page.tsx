@@ -5,6 +5,7 @@ import Link from "next/link";
 import { desc } from "drizzle-orm";
 
 async function getBookmarks() {
+  "use cache";
   return db
     .select()
     .from(bookmarksTable)
