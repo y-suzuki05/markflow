@@ -4,6 +4,7 @@ import { bookmarksTable } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import Link from "next/link";
 import UrlCopyButton from "@/app/components/url-copy-button";
+import { notFound } from "next/navigation";
 
 async function getBookmark(id: number) {
   const rows = await db
@@ -21,15 +22,13 @@ export default async function Page({
   const { id: rawId } = await params;
   const id = Number(rawId);
 
-  // TODO: 404ページ追加
   if (!Number.isInteger(id) || id < 1) {
-    return <Box>なにもありません</Box>;
+    notFound();
   }
 
   const bookmark = await getBookmark(id);
 
-  // TODO: 404ページ追加
-  if (!bookmark) return <Box>なにもありません</Box>;
+  if (!bookmark) notFound();
 
   return (
     <Box w="full" maxW="760px" mx="auto" my="48px" px="4">
