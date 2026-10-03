@@ -25,7 +25,7 @@ return rows[0];
 
 ## 3. 存在しない ID と404
 
-不正な形式の ID と、形式は正しいが DB に存在しない ID は、どちらも詳細ページを表示できない状態。現在は簡易メッセージを表示している。仕様では `notFound()` を呼び、`app/bookmarks/[id]/not-found.tsx` の404 UIへ分岐する想定。これは次に仕上げる項目。
+不正な形式の ID と、形式は正しいが DB に存在しない ID は、どちらも詳細ページを表示できない状態。現在は `notFound()` を呼び、共通の `app/not-found.tsx` へ分岐する。配置の判断やエラー処理との違いは、[404・エラー・ローディング・キャッシュの学習メモ](./bookmark-error-loading-cache-learning-notes.md)にまとめた。
 
 ## 4. Server Component と Client Component の境界
 
@@ -41,4 +41,4 @@ Toaster の表示領域は `Providers` 内に一度配置し、アプリ全体�
 
 ## 仕様との照合・残作業
 
-仕様書の詳細画面にある、動的ルート、Server Component からの Drizzle 取得、URL コピー、外部サイトを別タブで開く機能を実装した。存在しない ID で `notFound()` に分岐する404処理は未完了。
+仕様書の詳細画面にある、動的ルート、Server Component からの Drizzle 取得、URL コピー、外部サイトを別タブで開く機能を実装した。その後、共通404画面への分岐、詳細取得のキャッシュ、詳細ルートのローディングも追加した。学習内容は上記のメモを参照。
