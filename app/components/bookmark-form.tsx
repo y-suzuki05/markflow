@@ -19,12 +19,12 @@ export default function BookmarkForm() {
     <form action={formAction}>
       <Stack gap={4}>
         <Field.Root required invalid={Boolean(state.errors?.title)}>
-          <Field.Label fontSize={{ base: "14px", md: "16px" }}>
+          <Field.Label fontSize={{ base: "sm", md: "md" }}>
             タイトル
           </Field.Label>
           <Input
-            minH="44px"
-            fontSize="16px"
+            minH="11"
+            fontSize="md"
             name="title"
             value={values.title}
             onChange={(event) =>
@@ -37,10 +37,10 @@ export default function BookmarkForm() {
         </Field.Root>
 
         <Field.Root required invalid={Boolean(state.errors?.url)}>
-          <Field.Label fontSize={{ base: "14px", md: "16px" }}>URL</Field.Label>
+          <Field.Label fontSize={{ base: "sm", md: "md" }}>URL</Field.Label>
           <Input
-            minH="44px"
-            fontSize="16px"
+            minH="11"
+            fontSize="md"
             name="url"
             type="url"
             value={values.url}
@@ -54,12 +54,12 @@ export default function BookmarkForm() {
         </Field.Root>
 
         <Field.Root required invalid={Boolean(state.errors?.memo)}>
-          <Field.Label fontSize={{ base: "14px", md: "16px" }}>
+          <Field.Label fontSize={{ base: "sm", md: "md" }}>
             一言メモ
           </Field.Label>
           <Textarea
-            minH={{ base: "120px", md: "100px" }}
-            fontSize="16px"
+            minH={{ base: "7.5rem", md: "6.25rem" }}
+            fontSize="md"
             name="memo"
             value={values.memo}
             onChange={(event) =>
@@ -75,10 +75,10 @@ export default function BookmarkForm() {
           type="submit"
           alignSelf={{ base: "stretch", md: "flex-end" }}
           w={{ base: "full", md: "auto" }}
-          fontSize={{ base: "14px", md: "16px" }}
+          fontSize={{ base: "sm", md: "md" }}
           colorPalette="teal"
           variant="solid"
-          px={"16px"}
+          px={"4"}
           fontWeight={700}
           size={"lg"}
           disabled={pending}

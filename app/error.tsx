@@ -6,30 +6,26 @@ import Link from "next/link";
 export default function Error({ retry }: { retry: () => void }) {
   return (
     <Box
-      w={{ base: "calc(100% - 32px)", md: "full" }}
-      maxW="760px"
+      w={{ base: "calc(100% - 2rem)", md: "full" }}
+      maxW="47.5rem"
       mx="auto"
-      my={{ base: "24px", md: "48px" }}
-      px={{ base: "20px", md: "64px" }}
-      py={{ base: "32px", md: "64px" }}
-      fontSize={{ base: "14px", md: "16px" }}
+      my={{ base: "6", md: "12" }}
+      px={{ base: "5", md: "16" }}
+      py={{ base: "8", md: "16" }}
+      fontSize={{ base: "sm", md: "md" }}
       overflowWrap="anywhere"
       bg={"#fff"}
       textAlign={"center"}
     >
-      <Text
-        mb={"16px"}
-        fontWeight={700}
-        fontSize={{ base: "20px", md: "24px" }}
-      >
+      <Text mb={"4"} fontWeight={700} fontSize={{ base: "xl", md: "2xl" }}>
         エラーが発生しました
       </Text>
-      <Text mb={"24px"}>
+      <Text mb={"6"}>
         読み込みに失敗しました。しばらくしてから、もう一度お試しください
       </Text>
       <Flex
         direction={{ base: "column", md: "row" }}
-        gap="12px"
+        gap="3"
         align="stretch"
         justifyContent="center"
       >
@@ -37,11 +33,11 @@ export default function Error({ retry }: { retry: () => void }) {
           <Box
             display={"inline-block"}
             w={{ base: "full", md: "auto" }}
-            minH="44px"
+            minH="11"
             border={"1px solid"}
             borderColor={"#E2E8F0"}
-            py={"10px"}
-            px={"16px"}
+            py={"2.5"}
+            px={"4"}
             borderRadius={"md"}
             bg={"#fff"}
           >
@@ -50,10 +46,10 @@ export default function Error({ retry }: { retry: () => void }) {
         </Link>
         <Button
           w={{ base: "full", md: "auto" }}
-          fontSize={{ base: "14px", md: "16px" }}
+          fontSize={{ base: "sm", md: "md" }}
           colorPalette="teal"
           variant="solid"
-          px={"16px"}
+          px={"4"}
           fontWeight={700}
           size={"lg"}
           onClick={() => retry()}

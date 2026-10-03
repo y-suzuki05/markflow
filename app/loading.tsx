@@ -4,23 +4,23 @@ export default function Loading() {
   return (
     <Box
       w="full"
-      maxW="760px"
+      maxW="47.5rem"
       mx="auto"
-      my={{ base: "24px", md: "48px" }}
+      my={{ base: "6", md: "12" }}
       px="4"
-      fontSize={{ base: "14px", md: "16px" }}
+      fontSize={{ base: "sm", md: "md" }}
       overflowWrap="anywhere"
     >
-      <Skeleton height="32px" width={{ base: "70%", md: "240px" }} />
+      <Skeleton height="8" width={{ base: "70%", md: "60" }} />
       <Box
         bg={"#fff"}
         border={"1px solid"}
         borderColor={"#E2E8F0"}
         borderRadius={"md"}
-        mt={{ base: "20px", md: "24px" }}
-        p={{ base: "20px", md: "32px" }}
+        mt={{ base: "5", md: "6" }}
+        p={{ base: "5", md: "8" }}
       >
-        <Skeleton height="120px" />
+        <Skeleton height="7.5rem" />
       </Box>
     </Box>
   );

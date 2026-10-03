@@ -33,11 +33,11 @@ export default async function Page({
   return (
     <Box
       w="full"
-      maxW="760px"
+      maxW="47.5rem"
       mx="auto"
-      my={{ base: "24px", md: "48px" }}
+      my={{ base: "6", md: "12" }}
       px="4"
-      fontSize={{ base: "14px", md: "16px" }}
+      fontSize={{ base: "sm", md: "md" }}
       overflowWrap="anywhere"
     >
       <Link href={`/bookmarks`}>
@@ -45,11 +45,11 @@ export default async function Page({
           display={"inline-block"}
           w={{ base: "full", md: "auto" }}
           textAlign="center"
-          minH="44px"
+          minH="11"
           border={"1px solid"}
           borderColor={"#E2E8F0"}
-          py={"10px"}
-          px={"16px"}
+          py={"2.5"}
+          px={"4"}
           borderRadius={"md"}
           bg={"#fff"}
         >
@@ -61,18 +61,18 @@ export default async function Page({
         border={"1px solid"}
         borderColor={"#E2E8F0"}
         borderRadius={"md"}
-        mt={{ base: "20px", md: "24px" }}
-        p={{ base: "20px", md: "32px" }}
+        mt={{ base: "5", md: "6" }}
+        p={{ base: "5", md: "8" }}
       >
-        <Heading fontSize={{ base: "22px", md: "24px" }} lineHeight="1.4">
+        <Heading fontSize={{ base: "1.375rem", md: "2xl" }} lineHeight="1.4">
           {bookmark.title}
         </Heading>
-        <Text color={"#718096"} fontSize={"12px"} mt={"12px"}>
+        <Text color={"#718096"} fontSize={"xs"} mt={"3"}>
           {bookmark.url}
         </Text>
         <Text
-          mt={{ base: "20px", md: "24px" }}
-          py={{ base: "20px", md: "24px" }}
+          mt={{ base: "5", md: "6" }}
+          py={{ base: "5", md: "6" }}
           borderTop={"1px solid"}
           borderBottom={"1px solid"}
           borderColor={"#E2E8F0"}
@@ -80,31 +80,31 @@ export default async function Page({
           {bookmark.memo}
         </Text>
         <Flex
-          mt={{ base: "20px", md: "24px" }}
+          mt={{ base: "5", md: "6" }}
           direction={{ base: "column", md: "row" }}
           alignItems={{ base: "stretch", md: "center" }}
-          gap={{ base: "16px", md: "12px" }}
+          gap={{ base: "4", md: "3" }}
           justifyContent={"space-between"}
         >
-          <Text color={"#718096"} fontSize={"12px"}>
+          <Text color={"#718096"} fontSize={"xs"}>
             登録日時：{bookmark.createdAt.toLocaleString("ja-JP")}
           </Text>
           <Flex
             direction={{ base: "column", sm: "row" }}
-            gap="12px"
+            gap="3"
             flexShrink={0}
           >
             <UrlCopyButton url={bookmark.url} />
             <ChakraLink
               w={{ base: "full", md: "auto" }}
-              minH="44px"
+              minH="11"
               justifyContent="center"
-              fontSize={{ base: "14px", md: "16px" }}
+              fontSize={{ base: "sm", md: "md" }}
               href={bookmark.url}
               target="_blank"
               rel="noopener noreferrer"
-              py={"10px"}
-              px={"16px"}
+              py={"2.5"}
+              px={"4"}
               borderRadius={"md"}
               bg={"#319795"}
               color={"#fff"}

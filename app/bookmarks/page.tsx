@@ -17,28 +17,28 @@ export default async function Page() {
   return (
     <Box
       w="full"
-      maxW="760px"
+      maxW="47.5rem"
       mx="auto"
-      my={{ base: "24px", md: "48px" }}
+      my={{ base: "6", md: "12" }}
       px="4"
-      fontSize={{ base: "14px", md: "16px" }}
+      fontSize={{ base: "sm", md: "md" }}
       overflowWrap="anywhere"
     >
       <Flex
         direction={{ base: "column", md: "row" }}
         align={{ base: "stretch", md: "center" }}
         justifyContent="space-between"
-        gap={{ base: "12px", md: "24px" }}
+        gap={{ base: "3", md: "6" }}
       >
-        <Heading fontSize={{ base: "22px", md: "24px" }} lineHeight="1.4">
+        <Heading fontSize={{ base: "1.375rem", md: "2xl" }} lineHeight="1.4">
           ブックマーク一覧
         </Heading>
         <Link href={"/bookmarks/new"}>
           <Box
             textAlign="center"
-            minH="44px"
-            py={"10px"}
-            px={"16px"}
+            minH="11"
+            py={"2.5"}
+            px={"4"}
             borderRadius={"md"}
             bg={"#319795"}
             color={"#fff"}
@@ -55,45 +55,45 @@ export default async function Page() {
           {bookmarks.map((bookmark) => (
             <Card.Root
               key={bookmark.id}
-              p={{ base: "16px", md: "24px" }}
-              gap={{ base: "12px", md: "6" }}
+              p={{ base: "4", md: "6" }}
+              gap={{ base: "3", md: "4" }}
             >
               <Card.Header
-                p={{ base: "0", md: "6" }}
-                fontSize={{ base: "18px", md: "20px" }}
+                p={0}
+                fontSize={{ base: "lg", md: "xl" }}
                 fontWeight={700}
                 color={"#2D3748"}
               >
                 {bookmark.title}
               </Card.Header>
-              <Card.Body p={{ base: "0", md: "6" }}>
-                <Text color={"#718096"} fontSize={"12px"}>
+              <Card.Body p={0}>
+                <Text color={"#718096"} fontSize={"xs"}>
                   {bookmark.url}
                 </Text>
-                <Text mt={"12px"}>
+                <Text mt={"3"}>
                   {bookmark.memo.length > 100
                     ? `${bookmark.memo.slice(0, 100)}…`
                     : bookmark.memo}
                 </Text>
               </Card.Body>
               <Card.Footer
-                p={{ base: "0", md: "6" }}
+                p={0}
                 flexDirection={{ base: "column", md: "row" }}
                 alignItems={{ base: "stretch", md: "center" }}
                 justifyContent="space-between"
-                gap="12px"
+                gap="3"
               >
-                <Text color={"#718096"} fontSize={"12px"}>
+                <Text color={"#718096"} fontSize={"xs"}>
                   登録日時：{bookmark.createdAt.toLocaleString("ja-JP")}
                 </Text>
                 <Link href={`/bookmarks/${bookmark.id}`}>
                   <Box
                     textAlign="center"
-                    minH="44px"
+                    minH="11"
                     border={"1px solid"}
                     borderColor={"#E2E8F0"}
-                    py={"10px"}
-                    px={"16px"}
+                    py={"2.5"}
+                    px={"4"}
                     borderRadius={"md"}
                   >
                     詳細を見る

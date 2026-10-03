@@ -6,20 +6,20 @@ export default function Page() {
   return (
     <Box
       w="full"
-      maxW="760px"
+      maxW="47.5rem"
       mx="auto"
-      my={{ base: "24px", md: "48px" }}
+      my={{ base: "6", md: "12" }}
       px="4"
-      fontSize={{ base: "14px", md: "16px" }}
+      fontSize={{ base: "sm", md: "md" }}
       overflowWrap="anywhere"
     >
       <Flex
         direction={{ base: "column", md: "row" }}
         align={{ base: "stretch", md: "center" }}
         justifyContent="space-between"
-        gap={{ base: "12px", md: "24px" }}
+        gap={{ base: "3", md: "6" }}
       >
-        <Heading fontSize={{ base: "22px", md: "24px" }} lineHeight="1.4">
+        <Heading fontSize={{ base: "1.375rem", md: "2xl" }} lineHeight="1.4">
           新規ブックマーク登録
         </Heading>
         <Link href={`/bookmarks`}>
@@ -27,11 +27,11 @@ export default function Page() {
             display={"inline-block"}
             textAlign="center"
             w={{ base: "full", md: "auto" }}
-            minH="44px"
+            minH="11"
             border={"1px solid"}
             borderColor={"#E2E8F0"}
-            py={"10px"}
-            px={"16px"}
+            py={"2.5"}
+            px={"4"}
             borderRadius={"md"}
             bg={"#fff"}
           >
@@ -44,8 +44,8 @@ export default function Page() {
         border={"1px solid"}
         borderColor={"#E2E8F0"}
         borderRadius={"md"}
-        mt={{ base: "20px", md: "24px" }}
-        p={{ base: "20px", md: "32px" }}
+        mt={{ base: "5", md: "6" }}
+        p={{ base: "5", md: "8" }}
       >
         <BookmarkForm />
       </Box>
