@@ -88,7 +88,10 @@ export default async function Page({
           justifyContent={"space-between"}
         >
           <Text color={"#718096"} fontSize={"xs"}>
-            登録日時：{bookmark.createdAt.toLocaleString("ja-JP")}
+            登録日時：
+            {bookmark.createdAt.toLocaleString("ja-JP", {
+              timeZone: "Asia/Tokyo",
+            })}
           </Text>
           <Flex
             direction={{ base: "column", sm: "row" }}

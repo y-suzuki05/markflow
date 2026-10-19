@@ -84,7 +84,10 @@ export default async function Page() {
                 gap="3"
               >
                 <Text color={"#718096"} fontSize={"xs"}>
-                  登録日時：{bookmark.createdAt.toLocaleString("ja-JP")}
+                  登録日時：
+                  {bookmark.createdAt.toLocaleString("ja-JP", {
+                    timeZone: "Asia/Tokyo",
+                  })}
                 </Text>
                 <Link href={`/bookmarks/${bookmark.id}`}>
                   <Box
