@@ -73,6 +73,7 @@ export default async function Page({
         </Text>
         <Text
           mt={{ base: "5", md: "6" }}
+          whiteSpace="pre-wrap"
           py={{ base: "5", md: "6" }}
           borderTop={"1px solid"}
           borderBottom={"1px solid"}

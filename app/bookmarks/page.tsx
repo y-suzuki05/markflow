@@ -70,7 +70,7 @@ export default async function Page() {
                 <Text color={"#718096"} fontSize={"xs"}>
                   {bookmark.url}
                 </Text>
-                <Text mt={"3"}>
+                <Text mt={"3"} whiteSpace="pre-wrap">
                   {bookmark.memo.length > 100
                     ? `${bookmark.memo.slice(0, 100)}…`
                     : bookmark.memo}
