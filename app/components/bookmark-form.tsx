@@ -23,7 +23,10 @@ export default function BookmarkForm() {
             タイトル
           </Field.Label>
           <Input
-            minH="11"
+            h="auto"
+            minH="12"
+            px="4"
+            py="2.5"
             fontSize="md"
             name="title"
             value={values.title}
@@ -39,7 +42,10 @@ export default function BookmarkForm() {
         <Field.Root required invalid={Boolean(state.errors?.url)}>
           <Field.Label fontSize={{ base: "sm", md: "md" }}>URL</Field.Label>
           <Input
-            minH="11"
+            h="auto"
+            minH="12"
+            px="4"
+            py="2.5"
             fontSize="md"
             name="url"
             type="url"
@@ -59,6 +65,8 @@ export default function BookmarkForm() {
           </Field.Label>
           <Textarea
             minH={{ base: "7.5rem", md: "6.25rem" }}
+            px="4"
+            py="3"
             fontSize="md"
             name="memo"
             value={values.memo}
